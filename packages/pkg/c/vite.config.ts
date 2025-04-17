@@ -14,7 +14,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ["vue", "@shared/d"],
+      external: ["@shared/d"],
     },
   },
 });
