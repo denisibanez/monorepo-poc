@@ -1,0 +1,39 @@
+{
+  "name": "vue-monorepo-final",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/pkg/*",
+    "packages/shared/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -r run dev",
+    "build": "pnpm -r run build",
+    "preview": "pnpm -r run preview",
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "vue": "^3.4.0",
+    "vue-i18n": "^9.9.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vitest/coverage-v8": "^3.1.1",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/test-utils": "^2.4.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.20.0",
+    "husky": "^9.0.11",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.2.0",
+    "vitest": "^0.34.6"
+  }
+}
